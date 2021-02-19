@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>Table</h2>                      
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Название</th>
+        <th>Дата последней активности</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let device of tableData">
+        <td>{{device.id}}</td>
+        <td>{{device.name}}</td>
+        <td>{{device.last_active | date:'dd-MM-yyyy hh:mm'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
